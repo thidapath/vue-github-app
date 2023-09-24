@@ -11,6 +11,19 @@ on:
     branches:
       - '**'
 jobs:
+  lint-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+   
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm ci
+      - name: Run lint
+        run: npm run lint
+
   build:
     runs-on: ubuntu-latest
     name: Build the package
