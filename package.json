@@ -8,7 +8,7 @@
   },
   "files": [
     "outfile.cjs",
-    "template"
+    "templatne"
   ],
   "engines": {
     "node": ">=v16.20.0"
