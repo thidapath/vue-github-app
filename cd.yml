@@ -4,8 +4,9 @@ on:
   push:
     tags:
       - '*'
+
 jobs:
-  build-producttion-job:
+  build-production-job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +21,4 @@ jobs:
 
       - name: Run build production (create dist folder)
         run: npm run build
-
-      - name: Run format
-        run: npm run format
+        
